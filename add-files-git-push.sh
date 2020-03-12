@@ -34,6 +34,6 @@ cp ${PATH_TO_LOCAL_COPY} ${PATH_TO_FILE}${FILE_NAME}
 #Make new branch,commit,push
 git branch ${BRANCH_NAME}
 git checkout ${BRANCH_NAME}
-git add ${PATH_TO_FILE}${FILE_NAME} 
+git add ${PATH_TO_FILE}${FILE_NAME}
 git commit -m "${COMMIT_MESSAGE}"
 git push --set-upstream origin ${BRANCH_NAME}

@@ -22,7 +22,7 @@ echo "------------------"
 echo "Org/Repo: ${org}/${repo}"
 echo "------------------"
 
-git clone https://github.com/${org}/${repo}.git
+git clone git@github.com:${org}/${repo}.git
 mv $repo temp/
 cp  add-files-git-push.sh temp/${repo}
 echo "Running Script in temp/${repo}..."
@@ -33,6 +33,5 @@ echo "Cleaning up..."
 cd ..
 rm -rf ${repo}/
 cd ..
-echo "Opening firefox for PR"
-firefox https://github.com/${org}/${repo}     ######################CHANGE TO MAKE FOR YOU
-
+echo "Opening browser for PR"
+open https://github.com/${org}/${repo}     ######################CHANGE TO MAKE FOR YOU
