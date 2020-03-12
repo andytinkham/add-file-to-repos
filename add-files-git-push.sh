@@ -2,16 +2,16 @@
 
 set -e
 
-BRANCH_NAME="add-test"
-COMMIT_MESSAGE="adding test"               ##Also PR Title
-FILE_NAME="test"
-PATH_TO_FILE="testdir/"             ##Path in repo that new file will be placed ex. path/to/dir/
-PATH_TO_LOCAL_COPY="/Users/jquilty/Projects/Scripts/ADD-FILE-TO-REPO/test"           ##Path to file on your machine that will be copied into repos ex. path/to/file
+BRANCH_NAME="add-codeclimate-yml"
+COMMIT_MESSAGE="adding .codeclimate.yml configuration"        ##Also PR Title
+FILE_NAME=".codeclimate.yml"
+PATH_TO_FILE=""             ##Path in repo that new file will be placed ex. path/to/dir/
+PATH_TO_LOCAL_COPY="/Users/atinkham/repos/cyberark/conjur-template/.codeclimate.yml"           ##Path to file on your machine that will be copied into repos ex. path/to/file
 
 #If file that is being added already exist; remove them
 if test -f "${PATH_TO_FILE}${FILE_NAME}"; then
     echo "${PATH_TO_FILE}${FILE_NAME}"
-    git rm ${PATH_TO_FILE}${FILE_NAME}.md
+    git rm ${PATH_TO_FILE}${FILE_NAME}
 fi
 
 #If path to dir doesn't exist; make directory that files are going to be placed in
